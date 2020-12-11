@@ -1,0 +1,467 @@
+/* 
+포지션
+position
+
+영역
+width, height, padding, margin
+
+모양
+border, border-radius, box-shadow
+
+색상
+background-color
+
+폰트
+color, font-size, font-weight
+
+etc.
+z-index, 
+transform
+-webkit-transform
+-o-transform
+-moz-transform
+*/
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://script.ebay.co.kr/fonts/GmarketSansBold.woff2') format('woff2');
+    src: url('https://script.ebay.co.kr/fonts/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+/* body */
+body{
+    width: 1920px;
+    height: 1080px;
+    background-color: #ffffff;
+}
+
+#gnb{
+    float:left;
+    width: 120px;
+    height: 1080px;
+    background-color: #4a4955;
+}
+.gnb_in{
+    padding-top: 220px;
+    width: 120px;
+    text-align: center;
+}
+.gnb_menubar{
+    margin: 0 25px;
+}
+
+.gnb_menu{
+    height: 85px;
+    margin-bottom: 50px;
+}
+
+.gnb_menu:first-child div{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.gnb_menu:first-child div img{
+    padding-top: 18px;
+}
+
+.gnb_in .gnb_menubar .gnb_menu div a{
+    display: block;
+    height: 85px;
+    margin-bottom: 50px;
+    font-size: 0;
+    text-decoration: none;
+}
+.gnb_menu h3{
+    width:70px;
+    margin-top: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+#lnb{
+    float: left;
+    overflow:hidden;
+    width: 365px;
+    height: 1080px;
+    background-color: #ffffff;
+}
+
+#lnb .home_btn{
+    margin: 32px 25px 0;
+    width: 315px;
+    height: 112px;
+    border-radius:56px;
+    border: none;
+    outline: 0 ;
+    cursor: pointer;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+    background-color: #eb1313;
+}
+
+.home_btn div{
+    margin-left: 30px;
+    text-align: left;
+    font-size: 0;
+}
+
+.home_btn div p, #lnb .home_btn div h3{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    vertical-align:middle;
+}
+
+.home_btn div p img{
+    line-height: 50px;
+    vertical-align:middle;
+}
+
+.home_btn div h3{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    margin-left:27px;
+}
+
+#lnb .lnb_menubar{
+    
+    margin-top: 78px;
+    margin-left: 56px;
+
+}
+
+.lnb_menubar .lnb_menu{
+    
+    margin-bottom: 53px;
+
+}
+
+.lnb_menubar .lnb_menu .lnb_btn{
+    height: 40px;
+    line-height: 40px;
+    font-size: 0;
+    border: none;
+    outline: 0 ;
+    cursor: pointer;
+    background: transparent;
+}
+
+#lnb .lnb_menubar .lnb_menu .lnb_btn p,
+#lnb .lnb_menubar .lnb_menu .lnb_btn h3{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#lnb .lnb_menubar .lnb_menu .lnb_btn p img{
+    vertical-align: middle;
+}
+
+#lnb .lnb_menubar .lnb_menu .lnb_btn h3{
+    margin-left: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4c4c4c;
+}
+
+#contents{
+    float: left;
+    width: 1435px;
+    height: 1080px;
+    overflow: hidden;
+
+}
+#contents .video{
+    width: 1435px;
+    height: 720px; 
+}
+
+/* order */
+#contents .order_area{
+    width: 1435px;
+    height: 105px;
+    background-color: #656474;
+}
+
+.order_area .order{
+    height: 60px;
+    padding-top:22px;
+}
+
+.order_area .order .order_btn{
+    float:left;
+    margin-left: 70px;
+    width: 225px;
+    height: 60px;
+    border-radius: 38px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: #f0f0f0;
+    border: none;
+    outline: 0 ;
+    cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+    color: #4c4c4c;
+}
+
+.order_area .order .review{
+    float: left;
+    margin-left: 36px;
+    width: 644px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle; 
+    border-radius: 68px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #f0f0f0;
+}
+
+.order_area .order .review img, .order_area .order .review h5{
+    float: left;
+}
+
+.order_area .order .review img{
+    margin-left: 34px;
+    margin-top: 19px;
+}
+
+.order_area .order .review .review_title{
+    margin-left: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #4c4c4c;
+}
+
+.order_area .order .review .review_text{
+    margin-left: 36px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: -1.35px;
+    
+    color: #808080;
+}
+
+.order_area .order .call{
+    float: left;
+    margin-left: 36px; 
+}
+
+.order_area .order .call .call_txt{
+    float:left;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 60px;
+    color: #ffffff;
+}
+
+.order_area .order .call .call_num{
+    float: right;
+    margin-left: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 60px;
+    color: #ffffff;
+}
+
+#contents .banner_area{
+    width: 1435px;
+    height: 255px;
+    background-image: linear-gradient(to right, #1042af 2%, #0d1953 76%);
+}
+
+.banner_area .banner_tit{
+    float:left;
+    width: 260px;
+    padding-top: 50px;
+    margin-left:  48px;
+}
+
+.banner_area .banner_tit .banner_title{
+    font-family: NanumSquare;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -1.56px;
+    color: #ffffff;
+}
+
+.banner_area .banner_tit .banner_title p{
+    font-weight: 700;
+}
+.banner_area .banner_tit .banner_subtitle{
+    margin-top: 18px;
+    font-family: NanumSquare;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -1.2px;
+    text-align: left;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.banner_area .banner_btn{
+    position: relative;
+    float:left;
+    width:400px;
+}
+
+.banner_area .banner_btn .banner_bg_txt{
+    opacity: 0.5;
+    font-family: 'GmarketSansBold';
+    font-size: 140px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -4.2px;
+    text-align: left;
+    color: #1f1f5c;
+}
+
+.banner_area .banner_btn .banner_img img:first-child{
+    position: absolute;
+    top: 100px;
+    left: 24px;
+    z-index: 10;
+}
+.banner_area .banner_btn .banner_img img:nth-child(2){
+    position: absolute;
+    top: -16px;
+    left: 91px;
+    z-index: 5;
+}
+.banner_area .banner_btn .banner_go_btn{
+    position: absolute;
+    margin-left: 175px;
+    width: 225px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    border: none;
+    outline: 0 ;
+    cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+    color: #4c4c4c;
+    z-index: 100;
+}
+
+
+.banner_area .banner_menu{
+    float: right;
+    position: relative;
+    width: 700px;
+    height: 255px;
+    overflow: hidden;    
+}
+
+.banner_area .banner_menu .banner_menubar{
+    position: absolute;
+    margin-top:20px;
+    width: 1000px;
+}
+
+.banner_area .banner_menu .banner_menubar .ban{
+    float: left;
+    /* margin-left: -170px;    */
+    width: 340px;
+    height: 235px;
+    border-radius: 80px 0 0 0;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #edf0f4 27%, #989898 80%);
+}
+
+.banner_menu .banner_menubar .ban:first-child{
+    margin-left: 0;
+    box-shadow: -40px 0 80px 0 #0d1953;
+    position: absolute;
+}
+
+.banner_menu .banner_menubar .ban:nth-child(2){
+    position: absolute;
+    margin-left: 170px;
+    z-index: 10;
+}
+.banner_menu .banner_menubar .ban:nth-child(3){
+    position: absolute;
+    margin-left: 340px;
+    z-index: 20;
+}
+.banner_menu .banner_menubar .ban:nth-child(4){
+    position: absolute;
+    margin-left: 510px;
+    z-index: 30;
+}
+
+.banner_menu .banner_menubar .ban a{
+    width: 340px;
+    height: 235px;
+    border-radius: 80px 0 0 0;
+    text-decoration: none;
+}
+
+.banner_menu .banner_menubar .ban .ban_txt{
+    margin-top: 30px;
+    margin-left: 38px;
+
+}
+.banner_menu .banner_menubar .ban .ban_txt h3{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.27;
+    letter-spacing: -1.5px;
+    color: #000000;
+}
+.banner_menu .banner_menubar .ban .ban_txt h5{
+    margin-top: 7px;
+    opacity: 0.6;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.39;
+    letter-spacing: -0.9px;
+    text-align: left;
+    color: rgba(38, 38, 38, 0.6);
+}
+
+.banner_menu .banner_menubar .ban p{
+    width: 175px;
+    height: 175px;
+    margin-top: 17px;
+    margin-left: 40px; 
+    text-align: center;
+}
+
+
+
+
+
+

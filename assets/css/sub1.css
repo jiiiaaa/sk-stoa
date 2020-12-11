@@ -1,0 +1,290 @@
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://script.ebay.co.kr/fonts/GmarketSansBold.woff2') format('woff2');
+    src: url('https://script.ebay.co.kr/fonts/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* body */
+body{
+    width: 1920px;
+    height: 1080px;
+    background-color: #ffffff;
+}
+
+#gnb{
+    float:left;
+    width: 120px;
+    height: 1080px;
+    background-color: #4a4955;
+}
+.gnb_in{
+    padding-top: 220px;
+    width: 120px;
+    text-align: center;
+}
+.gnb_menubar{
+    margin: 0 25px;
+}
+
+.gnb_menu{
+    height: 85px;
+    margin-bottom: 50px;
+}
+
+.gnb_menu:first-child div{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.gnb_menu:first-child div img{
+    padding-top: 18px;
+}
+
+.gnb_in .gnb_menubar .gnb_menu div a{
+    display: block;
+    height: 85px;
+    margin-bottom: 50px;
+    font-size: 0;
+    text-decoration: none;
+}
+.gnb_menu h3{
+    width:70px;
+    margin-top: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+#contents{
+    position:relative;
+    float: left;
+    width: 1800px;
+    height: 1080px;
+    overflow:hidden;
+}
+
+#contents .order_info{
+    position:relative;
+    width: 1800px;
+    height: 175px;
+    background: #f6f6f6; 
+}
+
+#contents .order_info .order_info_area{
+    position: absolute;
+    margin-top: 59px;
+    margin-left: 126px;
+    height: 60px;
+}
+
+.order_info_area .channel_info, .order_info_area .item_info, .order_info_area .price_info, .order_btn{
+    float: left;
+}
+
+.channel_info img, .channel_info .channel_name, .item_info .brand_name, .item_info .item_name{
+    display: inline-block;
+    font-size: 0;
+}
+
+.channel_info .channel_name{
+    margin-left: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 37px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 60px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4c4c4c;
+}
+.channel_info .underline{
+    margin-top: 18px;
+    margin-left: -16px;
+    width: 260px;
+    height: 8px;
+    border-radius: 56px;
+    background: #4c4c4c;
+}
+
+.item_info{
+    margin-left: 126px;
+}
+.item_info .brand_name, .item_info .item_name{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 60px;
+    letter-spacing: -3px;
+    color: #4c4c4c;
+}
+
+.item_info .item_name{
+    margin-left: 20px;
+    font-weight: 500;
+    letter-spacing: -2.8px;
+}
+
+.price_info{
+    margin-left: 432px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 60px;
+    letter-spacing: -2.8px;
+    color: #4c4c4c;
+}
+
+.order_btn{
+    margin-left: 70px;
+    width: 225px;
+    height: 60px;
+    border-radius: 38px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: #f0f0f0;
+    border: none;
+    outline: 0 ;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+    color: #4c4c4c;
+}
+
+#contents .video_area{
+    position: relative;
+    width: 1800px;
+    height: 905px;
+    text-align: center;
+    background: linear-gradient(45deg, #1e9cea, #6b79d5);
+}
+
+#contents .video_area>img{
+    margin-bottom: 50px;
+}
+
+.video_area .full_screen_btn{
+    position: absolute;
+    bottom: 110px;
+    right: 110px;
+    border: none;
+    outline: 0 ;
+    cursor: pointer;
+    background: none;
+}
+
+.video_area .full_screen_btn p{
+    width: 86px;
+    height: 86px;
+    line-height: 86px;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #eb1313;
+}
+
+.video_area .full_screen_btn p img{
+    vertical-align: middle;
+}
+
+#contents .lnb{
+    position: absolute;
+    top:0;
+    left: -344px;
+    overflow: hidden;
+    width: 365px;
+    height: 1080px;
+    box-shadow: 2px 0 30px 0 rgba(0, 0, 0, 0.31);
+    background-color: #e2e2ea;
+}
+
+.lnb .home_btn{
+    margin: 32px 25px 0;
+    width: 315px;
+    height: 112px;
+    border-radius:56px;
+    border: none;
+    outline: 0 ;
+    cursor: pointer;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+    background-color: #eb1313;
+}
+
+.home_btn div{
+    margin-left: 30px;
+    text-align: left;
+    font-size: 0;
+}
+
+.home_btn div p, .home_btn div h3{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    vertical-align:middle;
+}
+
+.home_btn div p img{
+    line-height: 50px;
+    vertical-align:middle;
+}
+
+.home_btn div h3{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    margin-left:27px;
+}
+
+.lnb .lnb_menubar{
+    
+    margin-top: 78px;
+    margin-left: 56px;
+
+}
+
+.lnb_menubar .lnb_menu{
+    margin-bottom: 53px;
+}
+
+.lnb_menubar .lnb_menu .lnb_btn{
+    height: 40px;
+    line-height: 40px;
+    font-size: 0;
+    border: none;
+    outline: 0 ;
+    cursor: pointer;
+    background: transparent;
+}
+
+.lnb .lnb_menubar .lnb_menu .lnb_btn p,
+.lnb .lnb_menubar .lnb_menu .lnb_btn h3{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lnb .lnb_menubar .lnb_menu .lnb_btn p img{
+    vertical-align: middle;
+}
+
+.lnb .lnb_menubar .lnb_menu .lnb_btn h3{
+    margin-left: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4c4c4c;
+}
