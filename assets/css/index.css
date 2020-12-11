@@ -41,42 +41,54 @@ body{
 #gnb{
     float:left;
     width: 120px;
-    height: 1080px;
     background-color: #4a4955;
 }
-.gnb_in{
+/* css 선언 #gnb(가장 큰 부모)기준으로 해주세요 */
+/* 
+A-2.
+#gnb .in{
     padding-top: 220px;
     width: 120px;
     text-align: center;
+} */
+#gnb .in{
+    padding-top: 225px;
+    padding-bottom: 230px; 
+    width: 120px;
+    text-align: center;
 }
-.gnb_menubar{
+
+#gnb .in .menubar{
     margin: 0 25px;
 }
 
-.gnb_menu{
-    height: 85px;
-    margin-bottom: 50px;
+#gnb .in .menubar .menu{
 }
 
-.gnb_menu:first-child div{
+#gnb .in .menubar .menu:first-child .image{
     width: 70px;
     height: 70px;
     border-radius: 35px;
     background-color: rgba(255, 255, 255, 0.15);
 }
-.gnb_menu:first-child div img{
+#gnb .in .menubar .menu:first-child .inner img{
     padding-top: 18px;
 }
 
-.gnb_in .gnb_menubar .gnb_menu div a{
+#gnb .in .menubar .menu .inner a{
     display: block;
     height: 85px;
     margin-bottom: 50px;
     font-size: 0;
     text-decoration: none;
 }
-.gnb_menu h3{
+
+#gnb .in .menubar .menu:last-child .inner a{
+    margin-bottom: 0px;
+}
+#gnb .in .menubar .menu .inner a .title{
     width:70px;
+    height: 27px;
     margin-top: 15px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 17px;
@@ -87,6 +99,10 @@ body{
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
+}
+
+#gnb .in .menubar .menu:first-child .inner a .title{
+    margin-top: -2px;
 }
 
 #lnb{
@@ -109,25 +125,25 @@ body{
     background-color: #eb1313;
 }
 
-.home_btn div{
+#lnb .home_btn .inner{
     margin-left: 30px;
     text-align: left;
     font-size: 0;
 }
 
-.home_btn div p, #lnb .home_btn div h3{
+#lnb .home_btn .inner .image, #lnb .home_btn .inner .txt{
     display: inline-block;
     height: 50px;
     line-height: 50px;
     vertical-align:middle;
 }
 
-.home_btn div p img{
+#lnb .home_btn .inner .image img{
     line-height: 50px;
     vertical-align:middle;
 }
 
-.home_btn div h3{
+#lnb .home_btn .inner .txt{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 34px;
     font-weight: bold;
@@ -136,20 +152,15 @@ body{
     margin-left:27px;
 }
 
-#lnb .lnb_menubar{
-    
+#lnb .menubar{
     margin-top: 78px;
     margin-left: 56px;
-
 }
 
-.lnb_menubar .lnb_menu{
-    
+#lnb .menubar .menu{    
     margin-bottom: 53px;
-
 }
-
-.lnb_menubar .lnb_menu .lnb_btn{
+#lnb .menubar .menu .btn{
     height: 40px;
     line-height: 40px;
     font-size: 0;
@@ -159,17 +170,17 @@ body{
     background: transparent;
 }
 
-#lnb .lnb_menubar .lnb_menu .lnb_btn p,
-#lnb .lnb_menubar .lnb_menu .lnb_btn h3{
+#lnb .menubar .menu .btn .image,
+#lnb .menubar .menu .btn .title{
     display: inline-block;
     vertical-align: middle;
 }
 
-#lnb .lnb_menubar .lnb_menu .lnb_btn p img{
+#lnb .menubar .menu .btn .image img{
     vertical-align: middle;
 }
 
-#lnb .lnb_menubar .lnb_menu .lnb_btn h3{
+#lnb .menubar .menu .btn .title{
     margin-left: 16px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 27px;
@@ -182,28 +193,38 @@ body{
 #contents{
     float: left;
     width: 1435px;
-    height: 1080px;
+    /* height: 1080px; */
     overflow: hidden;
-
+    font-size: 0;
 }
-#contents .video{
+
+#contents .video img{
     width: 1435px;
-    height: 720px; 
+    height: 720px;
 }
 
 /* order */
-#contents .order_area{
+#contents .order{
     width: 1435px;
-    height: 105px;
     background-color: #656474;
 }
 
-.order_area .order{
-    height: 60px;
-    padding-top:22px;
+/* 
+A-3. 
+css 작성 하실 때 button, a, text 등 추후 업데이트 시에도 확실한 고정값을 가진 element 제외하고, 
+gnb, order, lnb, banner 등 다른 element는 height 값 안 주고 하시는거 해볼게요
+*/
+#contents .order .inner{
+    overflow: hidden;
+    padding: 22px 0 23px;
+}
+#contents .order .inner::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 
-.order_area .order .order_btn{
+#contents .order .inner .btn{
     float:left;
     margin-left: 70px;
     width: 225px;
@@ -222,7 +243,7 @@ body{
     color: #4c4c4c;
 }
 
-.order_area .order .review{
+#contents .order .inner .review{
     float: left;
     margin-left: 36px;
     width: 644px;
@@ -234,16 +255,16 @@ body{
     background-color: #f0f0f0;
 }
 
-.order_area .order .review img, .order_area .order .review h5{
+#contents .order .inner .review img, #contents .order .inner .review h5{
     float: left;
 }
 
-.order_area .order .review img{
+#contents .order .inner .review img{
     margin-left: 34px;
     margin-top: 19px;
 }
 
-.order_area .order .review .review_title{
+#contents .order .inner .review .title{
     margin-left: 10px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 26px;
@@ -251,22 +272,21 @@ body{
     color: #4c4c4c;
 }
 
-.order_area .order .review .review_text{
+#contents .order .inner .review .text{
     margin-left: 36px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 27px;
     font-weight: bold;
-    letter-spacing: -1.35px;
-    
+    letter-spacing: -1.35px;    
     color: #808080;
 }
 
-.order_area .order .call{
+#contents .order .inner .call{
     float: left;
     margin-left: 36px; 
 }
 
-.order_area .order .call .call_txt{
+#contents .order .inner .call .txt{
     float:left;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 36px;
@@ -275,7 +295,7 @@ body{
     color: #ffffff;
 }
 
-.order_area .order .call .call_num{
+#contents .order .inner .call .num{
     float: right;
     margin-left: 20px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -286,20 +306,25 @@ body{
     color: #ffffff;
 }
 
-#contents .banner_area{
+#contents .banner{
     width: 1435px;
-    height: 255px;
     background-image: linear-gradient(to right, #1042af 2%, #0d1953 76%);
 }
 
-.banner_area .banner_tit{
+#contents .banner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#contents .banner .tit{
     float:left;
     width: 260px;
     padding-top: 50px;
     margin-left:  48px;
 }
 
-.banner_area .banner_tit .banner_title{
+#contents .banner .tit .title{
     font-family: NanumSquare;
     font-size: 52px;
     font-weight: 400;
@@ -308,10 +333,10 @@ body{
     color: #ffffff;
 }
 
-.banner_area .banner_tit .banner_title p{
+#contents .banner .tit .title .strong{
     font-weight: 700;
 }
-.banner_area .banner_tit .banner_subtitle{
+#contents .banner .tit .subtitle{
     margin-top: 18px;
     font-family: NanumSquare;
     font-size: 24px;
@@ -322,13 +347,13 @@ body{
     opacity: 0.8;
 }
 
-.banner_area .banner_btn{
+#contents .banner .btn{
     position: relative;
     float:left;
     width:400px;
 }
 
-.banner_area .banner_btn .banner_bg_txt{
+#contents .banner .btn .bg_txt{
     opacity: 0.5;
     font-family: 'GmarketSansBold';
     font-size: 140px;
@@ -341,19 +366,19 @@ body{
     color: #1f1f5c;
 }
 
-.banner_area .banner_btn .banner_img img:first-child{
+#contents .banner .btn .item img:first-child{
     position: absolute;
     top: 100px;
     left: 24px;
     z-index: 10;
 }
-.banner_area .banner_btn .banner_img img:nth-child(2){
+#contents .banner .btn .item img:nth-child(2){
     position: absolute;
     top: -16px;
     left: 91px;
     z-index: 5;
 }
-.banner_area .banner_btn .banner_go_btn{
+#contents .banner .btn .go_btn{
     position: absolute;
     margin-left: 175px;
     width: 225px;
@@ -374,7 +399,7 @@ body{
 }
 
 
-.banner_area .banner_menu{
+#contents .banner .menu{
     float: right;
     position: relative;
     width: 700px;
@@ -382,57 +407,55 @@ body{
     overflow: hidden;    
 }
 
-.banner_area .banner_menu .banner_menubar{
+#contents .banner .menu .menubar{
     position: absolute;
     margin-top:20px;
     width: 1000px;
 }
 
-.banner_area .banner_menu .banner_menubar .ban{
+#contents .banner .menu .menubar .ban{
     float: left;
-    /* margin-left: -170px;    */
     width: 340px;
-    height: 235px;
     border-radius: 80px 0 0 0;
     overflow: hidden;
     background-image: linear-gradient(to right, #edf0f4 27%, #989898 80%);
 }
 
-.banner_menu .banner_menubar .ban:first-child{
+#contents .banner .menu .menubar .ban:first-child{
     margin-left: 0;
     box-shadow: -40px 0 80px 0 #0d1953;
     position: absolute;
 }
 
-.banner_menu .banner_menubar .ban:nth-child(2){
+#contents .banner .menu .menubar .ban:nth-child(2){
     position: absolute;
     margin-left: 170px;
     z-index: 10;
 }
-.banner_menu .banner_menubar .ban:nth-child(3){
+#contents .banner .menu .menubar .ban:nth-child(3){
     position: absolute;
     margin-left: 340px;
     z-index: 20;
 }
-.banner_menu .banner_menubar .ban:nth-child(4){
+#contents .banner .menu .menubar .ban:nth-child(4){
     position: absolute;
     margin-left: 510px;
     z-index: 30;
 }
 
-.banner_menu .banner_menubar .ban a{
+#contents .banner .menu .menubar .ban a{
     width: 340px;
     height: 235px;
     border-radius: 80px 0 0 0;
     text-decoration: none;
 }
 
-.banner_menu .banner_menubar .ban .ban_txt{
+#contents .banner .menu .menubar .ban a .txt{
     margin-top: 30px;
     margin-left: 38px;
-
 }
-.banner_menu .banner_menubar .ban .ban_txt h3{
+
+#contents .banner .menu .menubar .ban a .txt h3{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 30px;
     font-weight: bold;
@@ -440,7 +463,8 @@ body{
     letter-spacing: -1.5px;
     color: #000000;
 }
-.banner_menu .banner_menubar .ban .ban_txt h5{
+
+#contents .banner .menu .menubar .ban a .txt h5{
     margin-top: 7px;
     opacity: 0.6;
     font-family: 'Noto Sans KR', sans-serif;
@@ -452,7 +476,7 @@ body{
     color: rgba(38, 38, 38, 0.6);
 }
 
-.banner_menu .banner_menubar .ban p{
+#contents .banner .menu .menubar .ban .image{
     width: 175px;
     height: 175px;
     margin-top: 17px;
