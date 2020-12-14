@@ -11,7 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- // css -->
     <!-- plugin -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugin/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/plugin/slick-theme.css"/>
     <!-- // plugin -->
+    <!-- js -->
+    <script src="./assets/plugin/jquery-1.11.0.min.js"></script>
+    <script src="./assets/plugin/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./assets/plugin/slick.min.js"></script>
+    <!-- //js -->
+    <!--  -->
 </head>
 <body>
 
@@ -144,11 +152,25 @@
             <div class="review">
                 <img src="./assets/images/review.png" />
                 <h5 class="title">상품리뷰</h5>
-                <h5 class="text">피부에 탄력이 생기는 느낌이에요!! 정말</h5>                    
+                <div class="slide" >
+                    <div class="slide-wrap">
+                        <div class="text">피부에 탄력이 생기는 느낌이에요!! 정말</div>
+                        <div class="text">화면에 보이는 색상 그대로에요!</div>
+                        <div class="text">기대했던 것보다 더 마음에 들어요!!</div>
+                        <div class="text">너무 편해서 매일 입게되네요 추천드려요!</div>
+                    </div>
+                </div>                    
             </div>
             <div class="call">
                 <h2 class="txt">자동</h2>
-                <h2 class="num">080·815·1313</h2>
+                <div class="slide" >
+                    <div class="slide-wrap">
+                        <h2 class="num">080·815·1313</h2>
+                        <h2 class="num">080·815·1111</h2>
+                        <h2 class="num">080·815·1212</h2>
+                        <h2 class="num">080·815·1414</h2>
+                    </div>
+                </div>
             </div>            
         </div>
     </div>
@@ -219,3 +241,21 @@
         </div>
     </div>
 </div>
+<script>
+    jQuery(function(){
+        $(document).ready(function(){
+            $('.slide-wrap').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                vertical: true,
+                arrows: false,
+            })
+        });
+    })
+</script>
+
+
+</body>
+</html>

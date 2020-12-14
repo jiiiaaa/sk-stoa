@@ -255,7 +255,8 @@ gnb, order, lnb, banner 등 다른 element는 height 값 안 주고 하시는거
     background-color: #f0f0f0;
 }
 
-#contents .order .inner .review img, #contents .order .inner .review h5{
+#contents .order .inner .review img, #contents .order .inner .review .title,
+#contents .order .inner .review .slide {
     float: left;
 }
 
@@ -272,8 +273,16 @@ gnb, order, lnb, banner 등 다른 element는 height 값 안 주고 하시는거
     color: #4c4c4c;
 }
 
-#contents .order .inner .review .text{
+#contents .order .inner .review .slide{
     margin-left: 36px;
+    width: 412px;
+}
+
+#contents .order .inner .review .text{
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 27px;
     font-weight: bold;
@@ -283,6 +292,7 @@ gnb, order, lnb, banner 등 다른 element는 height 값 안 주고 하시는거
 
 #contents .order .inner .call{
     float: left;
+    width: 390px;
     margin-left: 36px; 
 }
 
@@ -294,10 +304,12 @@ gnb, order, lnb, banner 등 다른 element는 height 값 안 주고 하시는거
     line-height: 60px;
     color: #ffffff;
 }
-
-#contents .order .inner .call .num{
+#contents .order .inner .call .slide{
     float: right;
+    width: 300px;
     margin-left: 20px;
+}
+#contents .order .inner .call .num{    
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 42px;
     font-weight: bold;
