@@ -17,42 +17,47 @@ body{
 #gnb{
     float:left;
     width: 120px;
-    height: 1080px;
     background-color: #4a4955;
 }
-.gnb_in{
-    padding-top: 220px;
+
+#gnb .in{
+    padding-top: 225px;
+    padding-bottom: 230px; 
     width: 120px;
     text-align: center;
 }
-.gnb_menubar{
+
+#gnb .in .menubar{
     margin: 0 25px;
 }
 
-.gnb_menu{
-    height: 85px;
-    margin-bottom: 50px;
+#gnb .in .menubar .menu{
 }
 
-.gnb_menu:first-child div{
+#gnb .in .menubar .menu:first-child .image{
     width: 70px;
     height: 70px;
     border-radius: 35px;
     background-color: rgba(255, 255, 255, 0.15);
 }
-.gnb_menu:first-child div img{
+#gnb .in .menubar .menu:first-child .inner img{
     padding-top: 18px;
 }
 
-.gnb_in .gnb_menubar .gnb_menu div a{
+#gnb .in .menubar .menu .inner a{
     display: block;
     height: 85px;
     margin-bottom: 50px;
     font-size: 0;
     text-decoration: none;
 }
-.gnb_menu h3{
+
+#gnb .in .menubar .menu:last-child .inner a{
+    margin-bottom: 0px;
+}
+#gnb .in .menubar .menu .inner a .title{
     width:70px;
+    height: 27px;
     margin-top: 15px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 17px;
@@ -65,38 +70,48 @@ body{
     color: #ffffff;
 }
 
+#gnb .in .menubar .menu:first-child .inner a .title{
+    margin-top: -2px;
+}
+
 #contents{
     position:relative;
     float: left;
     width: 1800px;
     height: 1080px;
     overflow:hidden;
+    font-size: 0;
 }
 
-#contents .order_info{
+#contents .order_area{
     position:relative;
     width: 1800px;
-    height: 175px;
+    box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.33);
     background: #f6f6f6; 
+    /* z-index: 5; */
 }
 
-#contents .order_info .order_info_area{
-    position: absolute;
-    margin-top: 59px;
-    margin-left: 126px;
-    height: 60px;
+#contents .order_area .inner{
+    width: 1800px;
+    padding: 59px 0 30px 126px;
 }
 
-.order_info_area .channel_info, .order_info_area .item_info, .order_info_area .price_info, .order_btn{
+#contents .order_area .inner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#contents .order_area .inner .channel, #contents .order_area .inner .item, #contents .order_area .inner .price, .order_btn{
     float: left;
 }
 
-.channel_info img, .channel_info .channel_name, .item_info .brand_name, .item_info .item_name{
+#contents .order_area .inner .channel img, #contents .order_area .inner .channel .name, #contents .order_area .inner .item .brand, #contents .order_area .inner .item .name{
     display: inline-block;
     font-size: 0;
 }
 
-.channel_info .channel_name{
+#contents .order_area .inner .channel .name{
     margin-left: 12px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 37px;
@@ -108,7 +123,7 @@ body{
     text-align: center;
     color: #4c4c4c;
 }
-.channel_info .underline{
+#contents .order_area .inner .channel .underline{
     margin-top: 18px;
     margin-left: -16px;
     width: 260px;
@@ -117,10 +132,10 @@ body{
     background: #4c4c4c;
 }
 
-.item_info{
+#contents .order_area .inner .item{
     margin-left: 126px;
 }
-.item_info .brand_name, .item_info .item_name{
+#contents .order_area .inner .item .brand, #contents .order_area .inner .item .name{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 40px;
     font-weight: bold;
@@ -129,13 +144,13 @@ body{
     color: #4c4c4c;
 }
 
-.item_info .item_name{
+#contents .order_area .inner .item .name{
     margin-left: 20px;
     font-weight: 500;
     letter-spacing: -2.8px;
 }
 
-.price_info{
+#contents .order_area .inner .price{
     margin-left: 432px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 40px;
@@ -145,7 +160,7 @@ body{
     color: #4c4c4c;
 }
 
-.order_btn{
+#contents .order_area .inner .order_btn{
     margin-left: 70px;
     width: 225px;
     height: 60px;
@@ -164,9 +179,7 @@ body{
 }
 
 #contents .video_area{
-    position: relative;
     width: 1800px;
-    height: 905px;
     text-align: center;
     background: linear-gradient(45deg, #1e9cea, #6b79d5);
 }
@@ -175,7 +188,7 @@ body{
     margin-bottom: 50px;
 }
 
-.video_area .full_screen_btn{
+#contents .video_area .full_screen_btn{
     position: absolute;
     bottom: 110px;
     right: 110px;
@@ -185,7 +198,7 @@ body{
     background: none;
 }
 
-.video_area .full_screen_btn p{
+#contents .video_area .full_screen_btn .image{
     width: 86px;
     height: 86px;
     line-height: 86px;
@@ -194,7 +207,7 @@ body{
     background-color: #eb1313;
 }
 
-.video_area .full_screen_btn p img{
+#contents .video_area .full_screen_btn .image img{
     vertical-align: middle;
 }
 
@@ -207,9 +220,10 @@ body{
     height: 1080px;
     box-shadow: 2px 0 30px 0 rgba(0, 0, 0, 0.31);
     background-color: #e2e2ea;
+    /* z-index: 10; */
 }
 
-.lnb .home_btn{
+#contents .lnb .home_btn{
     margin: 32px 25px 0;
     width: 315px;
     height: 112px;
@@ -221,25 +235,25 @@ body{
     background-color: #eb1313;
 }
 
-.home_btn div{
+#contents .lnb .home_btn .inner{
     margin-left: 30px;
     text-align: left;
     font-size: 0;
 }
 
-.home_btn div p, .home_btn div h3{
+#contents .lnb .home_btn .inner .image, #contents .lnb .home_btn .inner .txt{
     display: inline-block;
     height: 50px;
     line-height: 50px;
     vertical-align:middle;
 }
 
-.home_btn div p img{
+#contents .lnb .home_btn .inner .image img{
     line-height: 50px;
     vertical-align:middle;
 }
 
-.home_btn div h3{
+#contents .lnb .home_btn .inner .txt{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 34px;
     font-weight: bold;
@@ -248,18 +262,18 @@ body{
     margin-left:27px;
 }
 
-.lnb .lnb_menubar{
+#contents .lnb .menubar{
     
     margin-top: 78px;
     margin-left: 56px;
 
 }
 
-.lnb_menubar .lnb_menu{
+#contents .lnb .menubar .menu{
     margin-bottom: 53px;
 }
 
-.lnb_menubar .lnb_menu .lnb_btn{
+#contents .lnb .menubar .menu .btn{
     height: 40px;
     line-height: 40px;
     font-size: 0;
@@ -269,17 +283,17 @@ body{
     background: transparent;
 }
 
-.lnb .lnb_menubar .lnb_menu .lnb_btn p,
-.lnb .lnb_menubar .lnb_menu .lnb_btn h3{
+#contents .lnb .menubar .menu .btn .image,
+#contents .lnb .menubar .menu .btn .title{
     display: inline-block;
     vertical-align: middle;
 }
 
-.lnb .lnb_menubar .lnb_menu .lnb_btn p img{
+#contents .lnb .menubar .menu .btn .image img{
     vertical-align: middle;
 }
 
-.lnb .lnb_menubar .lnb_menu .lnb_btn h3{
+#contents .lnb .menubar .menu .btn .title{
     margin-left: 16px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 27px;
